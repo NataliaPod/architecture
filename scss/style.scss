@@ -1,0 +1,281 @@
+$primary-font-family: "Gotham";
+$primary-font-color: #fff;
+
+@import "fonts";
+@import "normalize";
+@import "layout";
+@import "elements";
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  color: #fff;
+  font: 600 18px/1.2 $primary-font-family;
+}
+
+/* Layout */
+.ba-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+
+  &__small {
+    max-width: 770px;
+  }
+}
+
+.ba-header {
+  background: url(../img/bg_main.png) no-repeat left bottom;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 50px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 260px;
+    padding-bottom: 45px;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+
+  &__projects {
+    display: flex;
+    justify-content: flex-end;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.ba-nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  &__item {
+    padding-left: 60px;
+    line-height: 1;
+  }
+
+  &__link {
+    color: #ffffff;
+    //   font: ;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: #2c4058;
+    }
+  }
+}
+
+.ba-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a + a {
+    margin-left: 22px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+
+    svg {
+      fill: #fff;
+
+      &:hover {
+        fill: #2c4058;
+      }
+    }
+
+    &:hover {
+      border-color: #2c4058;
+    }
+  }
+}
+
+.ba-projects {
+  color: #2c4058;
+  padding-top: 70px;
+  margin-bottom: 130px;
+
+  &__title {
+    margin-bottom: 95px;
+  }
+
+  &__desc {
+    margin-top: 130px;
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+  }
+
+  &__location {
+    padding-top: 65px;
+  }
+
+  &__item + &__item {
+    margin-bottom: 140px;
+  }
+}
+
+.ba-project {
+  margin-bottom: 35px;
+}
+
+.ba-btn {
+  text-decoration: none;
+  height: 50px;
+  background: #fff;
+  color: #2c4058;
+  padding: 20px 45px;
+  text-align: center;
+  border: 2px solid #2c4058;
+  margin-bottom: 65px;
+
+  &:hover {
+    color: #fff;
+    background: #2c4058;
+    opacity: 0.7;
+  }
+}
+
+.ba-news {
+  background: url(../img/bg_news.png) no-repeat left bottom;
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 210px;
+
+  & > img {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.ba-new {
+  text-decoration: none;
+  letter-spacing: 0;
+  color: #48596e;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 370px;
+  flex-shrink: 0;
+
+  &__desc {
+    background-color: #fff;
+    padding: 30px 25px 35px 22px;
+  }
+
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.ba-gallery {
+  padding-top: 130px;
+  color: #2c4058;
+  margin-bottom: 175px;
+
+  &__title {
+    margin-bottom: 155px;
+  }
+}
+
+.btn-gallery {
+}
+
+.map {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+}
+
+.ba-footer {
+  background: url(../img/Bg_footer.png) no-repeat left bottom;
+  background-size: cover;
+  height: 100%;
+  padding-top: 200px;
+  padding-bottom: 213px;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 43px;
+  }
+
+  &__copy {
+    display: flex;
+    flex-direction: row;
+
+    p + p {
+      margin-left: 20px;
+    }
+  }
+}
+
+.ba-search-form {
+  background: url(../img/Bg_form.png) no-repeat left top;
+  background-size: cover;
+  height: 450px;
+  width: 770px;
+  padding: 50px 60px 75px 55px;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.ba-contact {
+  position: relative;
+
+  &__title {
+    color: #2c4058;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 60px 75px 55px;
+
+    a {
+      margin-bottom: 35px;
+      text-decoration: none;
+      color: #2c4058;
+    }
+  }
+}
